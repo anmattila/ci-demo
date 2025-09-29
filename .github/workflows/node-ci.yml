@@ -16,6 +16,8 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm ci
+      - name: Audit level
+        run: npm audit --audit-level=high
       - name: Linting
         run: npm run lint
       - name: Run test
